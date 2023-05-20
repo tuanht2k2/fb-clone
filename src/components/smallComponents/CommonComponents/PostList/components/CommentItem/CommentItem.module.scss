@@ -1,0 +1,134 @@
+.wrapper {
+  display: flex;
+
+  &:hover {
+    .comment-detail-top .comment-detail-top-right {
+      visibility: visible;
+    }
+  }
+
+  & + .wrapper {
+    margin-top: 10px;
+  }
+}
+
+.comment-user-avatar-wrapper {
+  height: 100%;
+  width: 35px;
+  overflow: hidden;
+}
+
+.comment-user-avatar-img {
+  height: 35px;
+  width: 100%;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.comment-detail-wrapper {
+  margin-left: 10px;
+}
+
+.comment-detail-top {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.comment-detail-top-left {
+  padding: 5px 15px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--gray0);
+  border-radius: 15px;
+}
+
+.commment-detail-user-name {
+  font-family: EncodeSans-Bold;
+  font-size: 14px;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.commment-detail-text {
+  font-size: 14px;
+}
+
+.like-icon-wrapper {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateX(50%);
+  padding: 1px 3px 1px 1px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow-main);
+  cursor: pointer;
+}
+
+.like-icon-img {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.like-icon-quantity {
+  margin-left: 3px;
+  font-size: 13px;
+}
+
+.comment-detail-top-right {
+  margin-left: 10px;
+  height: 32px;
+  width: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  visibility: hidden;
+
+  &:hover {
+    background-color: var(--gray0);
+  }
+
+  & * {
+    color: var(--text-color3);
+  }
+}
+
+.comment-detail-bottom {
+  display: flex;
+  padding-left: 10px;
+}
+
+.comment-detail-bottom-item {
+  font-size: 12px;
+  color: var(--text-color3);
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &.active {
+    color: var(--blue1);
+    font-family: EncodeSans-Bold;
+  }
+}
+
+.like {
+  margin-right: 15px;
+}
+
+.time {
+  font-weight: 300;
+}

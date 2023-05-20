@@ -1,0 +1,39 @@
+// button
+
+.action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 14px;
+  border-radius: 6px;
+  transition: 0.3s;
+  cursor: pointer;
+  user-select: none;
+
+  & * {
+    font-family: 'EncodeSans-SemiBold';
+    font-size: 12px;
+  }
+
+  & span + span {
+    margin-left: 2px;
+  }
+}
+
+.gray-btn {
+  background-color: var(--gray-btn);
+
+  &:hover {
+    background-color: var(--gray-btn-hover);
+  }
+}
+
+.action-btn-text.light-text {
+  color: var(--gray0);
+}
+
+.action-btn-icon.light-text {
+  & * {
+    color: var(--gray0);
+  }
+}

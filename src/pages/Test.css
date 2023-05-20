@@ -1,0 +1,9 @@
+.box {
+  display: flex;
+  align-items: center;
+  background-color: aqua;
+}
+
+.test {
+  font-size: 16px !important;
+}

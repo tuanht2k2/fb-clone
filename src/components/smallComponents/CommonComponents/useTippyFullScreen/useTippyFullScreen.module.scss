@@ -1,0 +1,148 @@
+.tippy-wrapper {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--prevent-click-wrapper-background-color);
+}
+
+.tippy-content {
+  min-width: 30vw;
+  max-width: 35vw;
+  max-height: 85vh;
+  background-color: var(--white);
+  border-radius: 8px;
+  box-shadow: var(--box-shadow-main);
+  overflow-y: scroll;
+}
+
+.header {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--gray2);
+}
+
+.header-name {
+  flex: 1;
+  font-family: EncodeSans-ExtraBold;
+  font-size: 19px;
+  text-align: center;
+}
+
+.header-action {
+  height: 30px;
+  width: 30px;
+  justify-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  background-color: var(--gray0);
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--gray2);
+  }
+}
+
+.tippy-content-main {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.edit-btn {
+  margin: 10px 0;
+  flex: 1;
+  padding: 7px 0;
+  font-size: 13px;
+  font-family: EncodeSans-Bold;
+
+  &:hover {
+    background-color: var(--gray2);
+  }
+}
+
+.tippy-control {
+  padding: 10px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.btn {
+  font-family: EncodeSans-Bold;
+  cursor: pointer;
+
+  & + .btn {
+    margin-left: 10px;
+  }
+}
+
+.tippy-control-normal-btn {
+  background-color: var(--white);
+
+  &:hover {
+    background-color: var(--gray2);
+  }
+}
+
+.tippy-control-filled-btn {
+  background-color: var(--blue1);
+  color: var(--white);
+
+  &:hover {
+    background-color: var(--blue2);
+  }
+}
+
+.loading-icon {
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: spin 2s infinite linear;
+
+  & * {
+    font-size: 20px;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 1260px) {
+  .tippy-content {
+    min-width: 40vw;
+    max-width: 45vw;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .tippy-content {
+    max-width: 60vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .tippy-content {
+    min-width: 60vw;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .tippy-content {
+    min-width: 100vw;
+  }
+}

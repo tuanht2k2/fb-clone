@@ -1,0 +1,35 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.confirm-box-text {
+  font-size: 14px;
+}
+
+.confirm-box-control {
+  margin-top: 10px;
+}
+
+.control-btn {
+  font-family: EnCodeSans-Bold;
+  font-size: 13px;
+}
+
+.normal {
+  background-color: var(--white);
+  color: var(--blue1);
+
+  &:hover {
+    background-color: var(--gray2);
+  }
+}
+
+.filled {
+  background-color: var(--blue1);
+  color: var(--gray2);
+
+  &:hover {
+    background-color: var(--blue1);
+  }
+}

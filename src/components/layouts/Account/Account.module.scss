@@ -1,0 +1,59 @@
+:root {
+  --large-padding-main: 150px;
+  --medium-padding-main: 0px;
+  --small-padding-main: 0px;
+  --calc-padding-main: calc(100vw - 1024px);
+
+  --padding-level-2: 30px;
+}
+
+.wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.main {
+  width: 100%;
+  z-index: 0;
+}
+
+.bottom {
+  padding: 15px calc(var(--large-padding-main) + var(--padding-level-2));
+  display: flex;
+  justify-content: center;
+  background-color: var(--gray0);
+}
+
+.messenger-pop-up-parent {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  height: 0px;
+  width: 0px;
+}
+
+@media screen and (min-width: 1023px) and (max-width: 1260px) {
+  .bottom {
+    padding: 15px calc(var(--calc-padding-main) + var(--padding-level-2));
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+  .bottom {
+    padding: 15px calc(var(--medium-padding-main) + var(--padding-level-2));
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .bottom {
+    padding: 15px var(--padding-level-2);
+    flex-direction: column;
+  }
+}

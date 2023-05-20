@@ -1,0 +1,150 @@
+@import 'normalize.css';
+
+:root {
+  // layout
+  --header--lg-left-ratio: 0.7;
+  --header--lg-center-ratio: 1;
+  --header--lg-right-ratio: 0.7;
+
+  --header--xmd-left-ratio: 0.45;
+  --header--md-center-ratio: 0.7;
+  --header--md-right-ratio: 0.5;
+
+  --header---header--md-left-ratio: 0.4;
+
+  --header--sm-left-ratio: 0.3;
+  --header--sm-center-ratio: 0.7;
+  --header--sm-right-ratio: 0.5;
+
+  --primary: #fe2c55;
+  --dark-red: rgb(207, 7, 7);
+  --black: #000;
+  --white: #fff;
+  --gray0: #f0f2f5;
+  --gray1: #9d9fa1;
+  --gray2: #dcdee4;
+  --gray3: #d1d2d7;
+  --gray4: #e9eaf0;
+  --light-hover-blue: #166fd5;
+  --blue0: #197cee;
+  --blue1: #1b78e9;
+  --blue2: #1760b9;
+  --blue3: #174d97;
+  --green3: #42b72a;
+  --green5: #389d23;
+
+  --gray-bgr1: #f0f2f5;
+
+  --link-hover: #f2f2f2;
+  --link-hover-bolder: #e6e6e6;
+  --hover1: #e3e2e2;
+  --hover2: #eeeeee;
+  --hover3: #e5e5e5;
+
+  --search: #f0f2f5;
+
+  --text-color1: #404347;
+  --text-color2: rgb(227, 226, 226);
+  --text-color3: rgb(124, 124, 124);
+  --text-color4: #252627;
+  --text-color5: #e3e3e3;
+  --text-color6: #3f3f3f;
+  --text-color7: #86878b;
+
+  --min-width-setting1: 90px;
+
+  --border1: #e4e6eb;
+  --border2: #ced0d4;
+
+  --box-shadow-main: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+  --box-shadow-top: 0px -3px 2px rgba(236, 236, 236, 0.75);
+  --box-shadow-bottom: 0px 1px 1px #9999996b;
+
+  --prevent-click-wrapper-background-color: #f0f2f566;
+
+  --hover-dark-background-color: rgba(15, 15, 15, 0.639);
+}
+
+@font-face {
+  font-family: 'EncodeSans';
+  src: url('../../assets/fonts/EncodeSans/EncodeSans-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'EncodeSans-SemiBold';
+  src: url('../../assets/fonts/EncodeSans/EncodeSans-SemiBold.ttf');
+}
+
+@font-face {
+  font-family: 'EncodeSans-Bold';
+  src: url('../../assets/fonts/EncodeSans/EncodeSans-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'EncodeSans-ExtraBold';
+  src: url('../../assets/fonts/EncodeSans/EncodeSans-ExtraBold.ttf');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'EncodeSans';
+}
+
+html,
+body {
+  height: fit-content;
+  width: 100%;
+  // font-size: 62.5%;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-rendering: optimizespeed;
+  color: var(--text-color);
+  overflow-y: overlay;
+}
+
+// Scrollbar CSS
+html *::-webkit-scrollbar {
+  border-radius: 0;
+  width: 8px;
+  height: 4px;
+}
+
+html *::-webkit-scrollbar-thumb {
+  border-radius: 4px;
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+html *::-webkit-scrollbar-track {
+  border-radius: 0;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+input {
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+li {
+  text-decoration: none;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--text-color1);
+}
+
+img {
+  user-select: none;
+}
+
+.tippy-box .tippy-content div {
+  font-size: 10px;
+}

@@ -1,0 +1,134 @@
+.wrapper {
+  height: 230px;
+}
+
+.wrapper .stories-list {
+  height: 100%;
+  max-width: 611px;
+  padding: 10px 0 10px 5px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+}
+
+.story-item {
+  display: inline-block;
+  height: 100%;
+  width: 120px;
+  padding: 20px 5px 0 5px;
+}
+
+.story-item-link {
+  height: 100%;
+  width: 100%;
+  display: block;
+  position: relative;
+  border-radius: 10px;
+  overflow: hidden;
+  max-width: 110px;
+  box-shadow: var(--box-shadow1);
+
+  &:hover {
+    .story-details {
+      background-color: rgba(0, 0, 0, 0.241);
+    }
+    .story-img,
+    .story-create-img {
+      transform: scale(1.05);
+      transition: 0.2s;
+    }
+  }
+}
+
+.story-img-wrapper {
+  height: 100%;
+  width: 100%;
+}
+
+.story-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.story-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  padding: 13px 13px 8px 13px;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: rgba(0, 0, 0, 0.168);
+}
+
+.user-avt-wrapper {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 4px solid blue;
+  box-sizing: border-box;
+}
+
+.user-avt {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+}
+
+.user-name {
+  color: var(--white);
+  font-size: 13px;
+  line-height: 17px;
+  text-align: left;
+}
+
+// create story
+
+.story-create-wrapper {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--white);
+  box-sizing: border-box;
+}
+
+.story-create-img-wrapper {
+  height: 75%;
+  width: 100%;
+  position: relative;
+}
+
+.story-create-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.story-create-icon {
+  position: absolute;
+  bottom: -19px;
+  left: 36px;
+  display: flex;
+  height: 38px;
+  width: 38px;
+  justify-content: center;
+  align-items: center;
+  background-color: #1876f2;
+  color: var(--text-color2);
+  border: 5px solid var(--white);
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.story-create-title {
+  margin-bottom: 9px;
+  color: var(--text-color1);
+  font-size: 12px;
+  font-weight: 600;
+}

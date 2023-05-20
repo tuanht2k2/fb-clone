@@ -1,0 +1,65 @@
+.video-setting-tippy {
+  background-color: rgb(0 0 0 / 69%);
+  padding: 10px 15px;
+  color: var(--text-color2);
+  font-size: 12px;
+  border-radius: 8px;
+}
+
+.video-setting-right-arrow {
+  display: inline-block;
+  margin-left: 4px;
+}
+
+.selection-header {
+  margin: 0 0 3px -4px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.selection-header-text {
+  margin-left: 4px;
+  display: flex;
+  align-items: center;
+}
+
+.selection-item {
+  padding: 2px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.selection-item-radio-wrapper {
+  height: 12px;
+  width: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #808080;
+  border-radius: 50%;
+}
+
+.selection-item-radio-checked {
+  height: 4px;
+  width: 4px;
+  background-color: var(--white);
+  border-radius: 50%;
+}
+
+.selection-item-value-select {
+  margin-left: 13px;
+  flex: 1;
+}
+
+.selection-item-title {
+  min-width: 80px;
+  flex: 1;
+}
+
+.selection-item-value-show-wrapper {
+  display: flex;
+  align-items: center;
+}

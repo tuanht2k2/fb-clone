@@ -1,0 +1,176 @@
+.wrapper,
+.introduction,
+.main,
+.main-login,
+.login-wrapper,
+.form-tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  min-width: 100vw;
+  min-height: 100vh;
+  height: 100%;
+  width: 100%;
+  padding: 0 30px;
+  background-color: var(--gray-bgr1);
+}
+
+.wrapper-align {
+  display: flex;
+}
+
+.introduction {
+  max-width: 650px;
+  flex: 1.5;
+  flex-direction: column;
+}
+
+.name {
+  align-self: flex-start;
+  font-size: 50px;
+  color: var(--blue1);
+  font-weight: 900;
+}
+
+.content {
+  padding: 10px 0 60px 0;
+  font-size: 30px;
+}
+
+.main {
+  margin-left: 50px;
+  flex: 1;
+  max-width: 400px;
+  flex-direction: column;
+}
+
+.main-login {
+  width: 100%;
+  padding: 14px;
+  flex-direction: column;
+  background-color: var(--white);
+  border: 1px solid transparent;
+  border-radius: 6px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.login-wrapper {
+  width: 100%;
+  flex-direction: column;
+  border-bottom: 1px solid var(--gray3);
+}
+
+.form-tag {
+  margin-bottom: 15px;
+  width: 100%;
+  flex-direction: column;
+}
+
+button {
+  padding: 10px;
+  border-color: transparent;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.login-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--blue1);
+
+  &:hover {
+    background-color: var(--blue2);
+  }
+
+  & * {
+    font-weight: bold;
+    color: var(--white);
+    font-size: 15px;
+  }
+}
+
+.login-btn-loading-wrapper {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from {
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.forget-password {
+  padding: 15px 0;
+  color: var(--blue1);
+  font-size: 14px;
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.create-account-btn {
+  margin: 25px 0 15px 0;
+  background-color: var(--green3);
+  color: var(--white);
+  &:hover {
+    background-color: var(--green5);
+  }
+}
+
+.main-page-create {
+  margin-top: 35px;
+  font-size: 14px;
+  text-align: center;
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper-align {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main {
+    margin-left: 0;
+  }
+
+  .name {
+    align-self: center;
+  }
+
+  .content {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+}
+
+@media screen and (max-width: 540px) and (min-width: 375px) {
+  .content {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .name {
+    font-size: 30px;
+  }
+  .content {
+    font-size: 14px;
+    padding-bottom: 15px;
+  }
+}
+
+// mui
+
+.css-15e8wlu-MuiFormLabel-root-MuiInputLabel-root {
+  color: red;
+  font-size: 20px;
+}

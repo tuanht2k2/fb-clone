@@ -1,0 +1,133 @@
+.message-group-wrapper {
+  max-width: 70%;
+  padding: 2px 10px 2px 0;
+  display: flex;
+  overflow: hidden;
+  user-select: text;
+
+  &.self {
+    align-self: flex-end;
+  }
+
+  &.other {
+    align-self: flex-start;
+  }
+}
+
+.message-group-left {
+  align-self: flex-end;
+}
+
+.message-group-author-avatar {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.message-group-right {
+  padding: 10px 10px 0 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+// message item
+
+.message-wrapper {
+  padding: 2px 0;
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+
+  &.self {
+    align-self: flex-end;
+  }
+
+  &.other {
+    align-self: flex-start;
+  }
+}
+
+.message-time-create {
+  width: 100%;
+  text-align: center;
+  font-size: 13px;
+}
+
+.message-text-wrapper {
+  max-width: 225px;
+  width: fit-content;
+  padding: 10px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 15px;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+
+  &.self {
+    align-self: flex-end;
+    background-color: var(--blue1);
+    .message-item-text {
+      color: var(--white);
+    }
+  }
+
+  &.other {
+    align-self: flex-start;
+    background-color: var(--gray0);
+  }
+}
+
+.message-item-text {
+  max-width: 195px;
+  font-size: 16px;
+}
+
+// message-item-image
+
+.message-image-wrapper {
+  padding: 10px 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.message-item-image-item-wrapper {
+  width: 100%;
+  max-height: 165px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--black);
+  border-radius: 10px;
+  overflow: hidden;
+
+  & + & {
+    margin-top: 5px;
+  }
+}
+
+.message-item-image-item-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.time-create {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  font-size: 13px;
+  background-color: #292929c3;
+  border-radius: 10px;
+}

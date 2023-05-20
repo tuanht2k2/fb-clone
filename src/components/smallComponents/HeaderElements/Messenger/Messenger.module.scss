@@ -1,0 +1,126 @@
+:root {
+  --padding-main: 15px;
+}
+
+// click
+
+.messenger-icon-wrapper {
+  position: relative;
+  margin: 0 6px 0 12px;
+  display: flex;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  background-color: #e4e6eb;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #dcdfe7;
+  }
+}
+
+.messenger-quantity {
+  position: absolute;
+  top: -4px;
+  right: -5px;
+  height: 17px;
+  width: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--dark-red);
+  font-size: 13px;
+  color: var(--white);
+  border-radius: 50%;
+  user-select: none;
+}
+
+// dropdown
+
+.messenger-wrapper {
+  max-height: 80vh;
+  max-width: 350px;
+  padding: 15px 0;
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: var(--box-shadow-main);
+  user-select: none;
+  overflow: scroll;
+}
+
+.messenger-top {
+  padding: 0 var(--padding-main);
+}
+
+.messenger-top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.messenger-top-header-title {
+  font-family: EncodeSans-Bold;
+  font-size: 20px;
+}
+
+.messenger-top-header-control {
+  display: flex;
+  align-items: center;
+}
+
+.messenger-top-header-control-icon-wrapper {
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  font-size: 16px;
+  transition: 0.3;
+  cursor: pointer;
+
+  &:hover {
+    background-color: var(--gray2);
+  }
+}
+
+.messenger-top-search {
+  margin-top: 10px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  background-color: var(--gray0);
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.messenger-top-search-icon-wrapper {
+  height: 25px;
+  width: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  border-radius: 50%;
+
+  & * {
+    color: var(--text-color3);
+  }
+}
+
+.messenger-top-search-input {
+  padding-right: 5px;
+  margin-left: 5px;
+  font-size: 15px;
+
+  &::placeholder {
+    font-size: 15px;
+  }
+}
+
+// message list
+
+.messenger-list {
+  padding: 10px;
+}
