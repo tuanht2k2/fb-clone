@@ -1,7 +1,6 @@
 // Import FirebaseAuth and firebase.
 import React, { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import 'firebase/compat/auth';
 
 import classNames from 'classnames/bind';
@@ -216,7 +215,7 @@ function SignIn() {
                 )}
               </button>
               <div className={cx('login-with-social-network')}>
-                <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={auth} />
+                {/* <StyledFirebaseAuth uiConfig={uiConfig} firebaseAuth={auth} /> */}
               </div>
               <a className={cx('forget-password')} href="/forgetpasswd">
                 Quên mật khẩu?

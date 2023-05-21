@@ -338,7 +338,7 @@ function MaximumMessPopUp({ messKey }) {
             (messengerTextAreaValue || files.length > 0) && isClickMessenger ? 'active' : null,
           )}
           onClick={() => {
-            handleCombineSendMessage();
+            (messengerTextAreaValue || files.length > 0) && handleCombineSendMessage();
           }}
         >
           <FontAwesomeIcon icon={faPaperPlane} />

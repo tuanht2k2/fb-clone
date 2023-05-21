@@ -6,7 +6,7 @@ import 'tippy.js/dist/tippy.css';
 import { default as Action } from '../HeaderElements/HeaderAction';
 import { default as Search } from '../HeaderElements/HeaderSearch';
 import styles from './Header.module.scss';
-import images from '../../../assets/images';
+import images from '~/assets/images';
 import { GroupIcon, HomeIcon, WatchIcon, UserIcon, GameIcon } from '../../../assets/Icons';
 import HeaderMenuActive from '../CommonComponents/HeaderMenuActive';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
