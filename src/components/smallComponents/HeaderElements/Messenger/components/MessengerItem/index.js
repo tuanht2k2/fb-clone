@@ -151,7 +151,7 @@ function MessengerItem({ messengerKey }) {
                 {lastMessage.authorId === currentUser.uid ? `Bạn` : `${lastMessage.authorName}`}
               </div>
               <div className={cx('message-item-detail-left-content-item')}>
-                {lastMessage.data.type === 'FILE'
+                {lastMessage.data.type === 'FILE' && lastMessage.data.files
                   ? ` đã gửi ${Object.keys(lastMessage.data.files).length} ảnh`
                   : `: ${lastMessage.data.text}`}
               </div>

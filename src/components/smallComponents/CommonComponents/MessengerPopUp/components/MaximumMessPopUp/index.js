@@ -28,6 +28,7 @@ function MaximumMessPopUp({ messKey }) {
   const [files, setFiles] = useState([]);
   const [isFriend, setIsFriend] = useState(false);
   const messengerInputRef = useRef();
+  const messengerListRef = useRef();
 
   const dispatch = useDispatch();
 
@@ -133,6 +134,8 @@ function MaximumMessPopUp({ messKey }) {
   };
 
   const handleSendMessages = async (messKey, author, text, files) => {
+    handleClearInput();
+
     const lastMessageGroupData = await handleGetLastMessageGroup(messKey);
 
     const newMessage = await handleCreateMessage(text, files);
@@ -152,8 +155,6 @@ function MaximumMessPopUp({ messKey }) {
         pushDb(newMessagePath, newMessage);
       });
     }
-
-    handleClearInput();
   };
 
   const handleMessageInputKeyDown = (e) => {
@@ -175,6 +176,12 @@ function MaximumMessPopUp({ messKey }) {
     } else {
       handleSendMessages(messKey, currentUser.uid, messengerTextAreaValue, files);
     }
+  };
+
+  // auto scroll to the last message
+  const handleScrollMessages = (messengerListRef) => {
+    const messengerListElement = messengerListRef.current;
+    messengerListElement.scrollTop = messengerListElement.scrollHeight;
   };
 
   // get Messenger Data
@@ -207,6 +214,12 @@ function MaximumMessPopUp({ messKey }) {
 
     return () => {};
   }, [messKey]);
+
+  // scroll to the last message
+  useEffect(() => {
+    messengerListRef.current && handleScrollMessages(messengerListRef);
+    return () => {};
+  });
 
   useEffect(() => {
     Object.keys(anotherPersonalMessMember).length > 0 && handleCheckRelationship(anotherPersonalMessMember.uid);
@@ -247,7 +260,7 @@ function MaximumMessPopUp({ messKey }) {
       </div>
 
       {/* Render messages  */}
-      <div className={cx('mess-content')}>
+      <div className={cx('mess-content')} ref={messengerListRef}>
         {messengerData.type === 'personal' ? (
           <div className={cx('mess-content-intro')}>
             <div className={cx('mess-content-intro-avatar-wrapper')}>

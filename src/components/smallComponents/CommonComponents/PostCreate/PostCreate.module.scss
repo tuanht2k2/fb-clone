@@ -53,6 +53,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  user-select: none;
 }
 
 .post-bottom-item {
@@ -76,6 +77,9 @@
 }
 
 .post-bottom-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 21px;
   width: 21px;
 }

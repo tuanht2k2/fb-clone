@@ -48,7 +48,7 @@ function NotificationDropdown() {
       interactive
       offset={[0, 8]}
       trigger="click"
-      placement="bottom-end"
+      placement="bottom"
       render={(attrs) => (
         <div className={cx('wrapper')}>
           {Object.keys(firendRequests).length > 0 ? (

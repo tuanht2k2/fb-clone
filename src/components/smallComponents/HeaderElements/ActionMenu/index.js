@@ -25,43 +25,43 @@ const MENULEFT = [
     name: 'Xã hội',
     item: [
       {
-        path: '/event',
+        path: '/',
         img: images.event,
         itemName: 'Sự kiện',
         desc: 'Tổ chức hoặc tìm sự kiện cùng những hoạt động khác trên mạng và ở quanh đây',
       },
       {
-        path: '/friends',
+        path: '/',
         img: images.friends,
         itemName: 'Bạn bè',
         desc: 'Tìm kiếm bạn bè hoặc những người bạn có thể biêt',
       },
       {
-        path: '/group',
+        path: '/',
         img: images.group,
         itemName: 'Nhóm',
         desc: 'Kết nối chung với những người chung sở thích',
       },
       {
-        path: '/newfeeds',
+        path: '/',
         img: images.newfeeds,
         itemName: 'Bảng tin',
         desc: 'Xem bài viết của những người và trang bạn theo dõi',
       },
       {
-        path: '/favourite',
+        path: '/',
         img: images.love,
         itemName: 'Yêu thích',
         desc: 'Xem những bài viết yêu thích của bạn',
       },
       {
-        path: '/recent',
+        path: '/',
         img: images.recent,
         itemName: 'Gần đây nhất',
         desc: 'Xem bài viết gần đây nhất từ bạn bè, nhóm, Trang và hơn thế nữa',
       },
       {
-        path: '/page',
+        path: '/',
         img: images.page,
         itemName: 'Trang',
         desc: 'Khám phá và kết nối với các doanh nghiệp trên Facebook',
@@ -72,25 +72,25 @@ const MENULEFT = [
     name: 'Giải trí',
     item: [
       {
-        path: '/videogame',
+        path: '/',
         img: images.videogame,
         itemName: 'Video chơi game',
         desc: 'Xem, kết nối với những game và người phát trực tiếp bạn yêu thích',
       },
       {
-        path: '/playinggame',
+        path: '/',
         img: images.playinggame,
         itemName: 'Chơi game',
         desc: 'Chơi game bạn yêu thích',
       },
       {
-        path: '/watch',
+        path: '/',
         img: images.watch,
         itemName: 'Watch',
         desc: 'Đích đến của video phù hợp với sở thích và quan hệ kết nối của bạn',
       },
       {
-        path: '/live',
+        path: '/',
         img: images.live,
         itemName: 'Video trực tiếp',
         desc: 'Xem video trực tiếp phổ biến từ khắp thế giới',
@@ -101,13 +101,13 @@ const MENULEFT = [
     name: 'Mua sắm',
     item: [
       {
-        path: '/facebookpay',
+        path: '/',
         img: images.facebookpay,
         itemName: 'Facebook Pay',
         desc: 'Một cách dễ dàng, bảo mật để thanh toán trên các ứng dụng bạn đang dùng',
       },
       {
-        path: '/marketplace',
+        path: '/',
         img: images.marketplace,
         itemName: 'Marketplace',
         desc: 'Mua bán trong cộng đồng của bạn',
@@ -121,17 +121,17 @@ const MENUCREATE = [
     type: 'individual',
     items: [
       {
-        path: '/post',
+        path: '/',
         img: <FontAwesomeIcon icon={faNewspaper} />,
         name: 'Đăng',
       },
       {
-        path: '/story',
+        path: '/',
         img: <FontAwesomeIcon icon={faBookOpen} />,
         name: 'Tin',
       },
       {
-        path: '/eventinlife',
+        path: '/',
         img: <FontAwesomeIcon icon={faCalendar} />,
         name: 'Sự kiện trong đời',
       },
@@ -141,28 +141,28 @@ const MENUCREATE = [
     type: 'social',
     items: [
       {
-        path: '/page',
+        path: '/',
         img: <FontAwesomeIcon icon={faPager} />,
         name: 'Trang',
       },
       {
-        path: '/advertisemen',
+        path: '/',
         img: <FontAwesomeIcon icon={faRectangleAd} />,
         name: 'Quảng cáo',
       },
       {
-        path: '/group',
+        path: '/',
         img: <FontAwesomeIcon icon={faUserGroup} />,
         name: 'Nhóm',
       },
       ,
       {
-        path: '/marketplace/createitem',
+        path: '//createitem',
         img: <FontAwesomeIcon icon={faBagShopping} />,
         name: 'Bài niêm yết trên Marketplace',
       },
       {
-        path: '/event',
+        path: '/',
         img: <FontAwesomeIcon icon={faCalendarTimes} />,
         name: 'Sự kiện',
       },
@@ -200,7 +200,7 @@ function ActionMenu() {
           <span className={cx('menu-create-header')}>Tạo</span>
           <ul className={cx('create-list-wrapper')}>
             <li className={cx('menu-item')}>
-              <Link className={cx('menu-item-link')} to={'/hehe'}>
+              <Link className={cx('menu-item-link')} to={'/'}>
                 <div className={cx('create-item-detail-img')}>
                   <FontAwesomeIcon icon={faPenToSquare} />
                 </div>
@@ -208,7 +208,7 @@ function ActionMenu() {
               </Link>
             </li>
             <li className={cx('menu-item')}>
-              <Link className={cx('menu-item-link')} to={'/hehe'}>
+              <Link className={cx('menu-item-link')} to={'/'}>
                 <div className={cx('create-item-detail-img')}>
                   <FontAwesomeIcon icon={faBookOpen} />
                 </div>
@@ -216,7 +216,7 @@ function ActionMenu() {
               </Link>
             </li>
             <li className={cx('menu-item')}>
-              <Link className={cx('menu-item-link')} to={'/hehe'}>
+              <Link className={cx('menu-item-link')} to={'/'}>
                 <div className={cx('create-item-detail-img')}>
                   <FontAwesomeIcon icon={faCalendar} />
                 </div>
@@ -225,7 +225,7 @@ function ActionMenu() {
             </li>
             <div className={cx('separator')}></div>
             <li className={cx('menu-item')}>
-              <Link className={cx('menu-item-link')} to={'/hehe'}>
+              <Link className={cx('menu-item-link')} to={'/'}>
                 <div className={cx('create-item-detail-img')}>
                   <FontAwesomeIcon icon={faFlag} />
                 </div>
@@ -233,7 +233,7 @@ function ActionMenu() {
               </Link>
             </li>
             <li className={cx('menu-item')}>
-              <Link className={cx('menu-item-link')} to={'/hehe'}>
+              <Link className={cx('menu-item-link')} to={'/'}>
                 <div className={cx('create-item-detail-img')}>
                   <FontAwesomeIcon icon={faRectangleAd} />
                 </div>
@@ -241,7 +241,7 @@ function ActionMenu() {
               </Link>
             </li>
             <li className={cx('menu-item')}>
-              <Link className={cx('menu-item-link')} to={'/hehe'}>
+              <Link className={cx('menu-item-link')} to={'/'}>
                 <div className={cx('create-item-detail-img')}>
                   <FontAwesomeIcon icon={faUserGroup} />
                 </div>
@@ -249,7 +249,7 @@ function ActionMenu() {
               </Link>
             </li>
             <li className={cx('menu-item')}>
-              <Link className={cx('menu-item-link')} to={'/hehe'}>
+              <Link className={cx('menu-item-link')} to={'/'}>
                 <div className={cx('create-item-detail-img')}>
                   <FontAwesomeIcon icon={faStar} />
                 </div>
@@ -257,7 +257,7 @@ function ActionMenu() {
               </Link>
             </li>
             <li className={cx('menu-item')}>
-              <Link className={cx('menu-item-link')} to={'/hehe'}>
+              <Link className={cx('menu-item-link')} to={'/'}>
                 <div className={cx('create-item-detail-img')}>
                   <FontAwesomeIcon icon={faBagShopping} />
                 </div>
