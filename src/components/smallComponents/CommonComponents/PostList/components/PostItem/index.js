@@ -41,7 +41,7 @@ function PostItem({ postId }) {
   const [isCommentVisible, setIsCommentVisible] = useState(false);
   const [isLiked, setIsLiked] = useState(false);
   const [postImage, setPostImage] = useState({});
-  const userPath = currentUser.uid === user.uid ? `/profile/${user.uid}/home` : `/users/${postData.uid}/home`;
+  const userPath = currentUser.uid === user.uid ? `/profile/${user.uid}/home` : `/users/${postData?.uid}/home`;
 
   const handleClickLike = () => {
     if (!isLiked) {
@@ -109,8 +109,8 @@ function PostItem({ postId }) {
         children: null,
         tippyRender: (
           <PostCreatePopUpControl
-            initPostCaption={postData.caption}
-            initImagePreviewPath={postData.mediaDownloadURL}
+            initPostCaption={postData?.caption}
+            initImagePreviewPath={postData?.mediaDownloadURL}
             handleSubmit={handleEditPost}
           />
         ),
@@ -199,13 +199,13 @@ function PostItem({ postId }) {
     getDb(`posts/${postId}`)
       .then((snapshot) => {
         const data = snapshot.val();
-        setPostData(data);
+        setPostData(data || {});
         return data;
       })
       .then((data) => {
         getDb(`users/${data.uid}`).then((snapshot) => {
           const userData = snapshot.val();
-          setUser(userData);
+          setUser(userData || {});
         });
       });
 
@@ -215,7 +215,7 @@ function PostItem({ postId }) {
     onValue(postReactionsRef, (snapshot) => {
       getDb(`posts/${postId}`).then((snapshot) => {
         const data = snapshot.val();
-        setPostData(data);
+        setPostData(data || {});
       });
     });
   }, []);

@@ -156,6 +156,8 @@ function SignIn() {
         setIsSignedIn(true);
       }
     });
+
+    document.title = 'Đăng nhập';
   }, []);
 
   return (

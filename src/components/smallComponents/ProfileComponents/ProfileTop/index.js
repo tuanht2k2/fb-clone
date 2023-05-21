@@ -163,8 +163,10 @@ function ProfileTop({ self, otherUser }) {
       snapshot.val() && setFriends(snapshot.val());
     });
 
+    document.title = self ? currentUser.displayName : otherUser.displayName;
+
     return () => {};
-  }, [currentUser]);
+  }, [currentUser, otherUser]);
 
   return (
     <div className={cx('wrapper-pd')}>

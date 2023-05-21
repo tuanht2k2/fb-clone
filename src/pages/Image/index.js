@@ -40,6 +40,8 @@ function Image() {
   useEffect(() => {
     handleGetImage();
 
+    document.title = 'Ảnh';
+
     return () => {};
   }, []);
 

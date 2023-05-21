@@ -38,6 +38,8 @@ function MessengerImage() {
       imageSnapshot.val() && setImagePath(imageSnapshot.val());
     });
 
+    document.title = 'Ảnh';
+
     return () => {};
   }, []);
 

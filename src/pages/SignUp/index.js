@@ -17,6 +17,7 @@ import { writeUserDataAfterSignUp } from '../../utils/database';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSpinner } from '@fortawesome/free-solid-svg-icons';
 import { useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 
 const cx = classNames.bind(style);
 
@@ -259,6 +260,10 @@ function RegisterBox() {
         }
       });
   };
+
+  useEffect(() => {
+    document.title = 'Đăng ký';
+  }, []);
 
   return (
     <div className={cx('wrapper')}>
