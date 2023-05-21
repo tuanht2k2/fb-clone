@@ -40,7 +40,7 @@ const MENU_DATA = {
             icon: <FontAwesomeIcon icon={faGear} />,
             title: 'Cài đặt',
             children: null,
-            to: '',
+            to: '/settings',
             onClick: '',
           },
           {
@@ -137,11 +137,10 @@ function HeaderAction() {
           </li>
         </HeadlessTippy>
 
-        {/* <li className={cx('action-item')}>
-          <MessageIcon width={'21px'} height={'21px'} className={cx('action-item-icon')} />
-        </li> */}
         <Messenger />
+
         <NotificationDropdown />
+
         <li className={cx('action-item')}>
           <HeadlessTippy
             interactive

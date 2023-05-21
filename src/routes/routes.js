@@ -1,6 +1,6 @@
-import { Home, SignIn, SignUp, AccountHome, Image, MessengerImage } from '../pages';
+import { Home, SignIn, SignUp, AccountHome, Image, MessengerImage, UserInformation } from '../pages';
 import { ProfileHome } from '../pages/ProfilePages';
-import { Profile } from '../components/layouts';
+import { OnlyHeader, Profile } from '../components/layouts';
 import Account from '~/components/layouts/Account';
 
 const routes = [
@@ -18,6 +18,7 @@ const routes = [
     component: MessengerImage,
     layout: null,
   },
+  { path: '/settings', extendablePath: false, type: 'private', component: UserInformation, layout: OnlyHeader },
 ];
 
 export default routes;

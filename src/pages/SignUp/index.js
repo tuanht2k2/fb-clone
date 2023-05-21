@@ -50,7 +50,7 @@ const TF_INPUT = [
     id: 'email',
     fullWidth: true,
     _name: 'email',
-    label: 'Số điện thoại hoặc email',
+    label: 'Email',
     type: 'text',
     inputProps: { style: { fontSize: 14 } },
     autoFocus: false,
@@ -208,6 +208,7 @@ function RegisterBox() {
   };
 
   const handleAfterSignUp = (registerInfo, user) => {
+    console.log(registerInfo);
     const firstName = registerInfo.firstName;
     const lastName = registerInfo.lastName;
     const displayName = firstName + ' ' + lastName;

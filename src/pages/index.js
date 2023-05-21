@@ -5,3 +5,4 @@ export { default as Image } from './Image';
 export { default as AccountHome } from './AccountPages/AccountHome';
 export { default as ProfleHome } from './ProfilePages/ProfileHome';
 export { default as MessengerImage } from './MessengerImage';
+export { default as UserInformation } from './UserInformation';

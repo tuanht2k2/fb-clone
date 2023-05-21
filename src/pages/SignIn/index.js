@@ -18,7 +18,7 @@ const INPUTS = [
     id: 'email',
     fullWidth: true,
     _name: 'email',
-    label: 'Số điện thoại hoặc email',
+    label: 'Email',
     type: 'text',
     inputProps: { style: { fontSize: 14 } },
     autoFocus: false,
@@ -64,7 +64,7 @@ function SignIn() {
   });
 
   const handleRedirect = () => {
-    navigate('/home');
+    navigate(-1);
   };
 
   // UI

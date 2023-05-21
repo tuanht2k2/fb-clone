@@ -11,6 +11,7 @@ const camelToSnake = (str) =>
 // user
 export const writeUserDataAfterSignUp = (user) => {
   setDb(`users/${user.uid}`, user);
+  console.log('user :', user);
 };
 
 export const handleUploadUserImage = (type, uid, img, dispatch, handleHide) => {

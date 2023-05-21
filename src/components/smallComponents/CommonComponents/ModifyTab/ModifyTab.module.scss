@@ -1,0 +1,49 @@
+.modify-tab-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--white);
+  border-radius: 15px;
+}
+
+.modify-tab-header {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modify-tab-main {
+}
+
+.modify-tab-control {
+  display: flex;
+  align-items: center;
+}
+
+.control-btn {
+  font-size: 17px;
+  font-family: EncodeSans-SemiBold;
+  cursor: pointer;
+
+  & + & {
+    margin-left: 20px;
+  }
+}
+
+.cancel-btn {
+  background-color: var(--gray0);
+
+  &:hover {
+    background-color: var(--gray2);
+  }
+}
+
+.submit-btn {
+  background-color: var(--blue1);
+  color: var(--white);
+
+  &:hover {
+    background-color: var(--blue2);
+  }
+}

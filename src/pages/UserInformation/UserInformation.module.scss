@@ -1,0 +1,132 @@
+.user-info-wrapper {
+  width: 100%;
+  height: calc(100vh - 60px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--gray0);
+}
+
+.user-info-wrapper-to-set-height {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-info-item {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--white);
+
+  border-radius: 15px;
+  box-shadow: var(--box-shadow-main);
+
+  & + & {
+    margin-left: 20px;
+  }
+}
+
+.user-info-left-avatar-wrapper {
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid var(--blue1);
+  box-shadow: var(--box-shadow-main);
+}
+
+.user-info-left-avatar-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+.user-info-left-name {
+  margin-top: 20px;
+  font-family: EncodeSans-Bold;
+  font-size: 25px;
+}
+
+.user-info-left-bio {
+  margin-top: 10px;
+  font-size: 17px;
+}
+
+.user-info-right-content {
+  display: flex;
+  align-items: center;
+}
+
+.user-info-right-title {
+  font-family: EncodeSans-Bold;
+  font-size: 25px;
+}
+
+.user-info-right-content-item {
+  width: 100%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-top: 1px solid var(--gray2);
+}
+
+.user-info-right-content {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.user-info-item-right-content-item-top {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.user-info-item-right-content-item-top-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-info-item-right-content-item-field-name {
+  font-family: EncodeSans-Bold;
+  font-size: 20px;
+}
+
+.user-info-item-right-content-item-field-value {
+  font-size: 18px;
+}
+
+.user-info-item-value-right-icon-wrapper {
+  margin-left: 10px;
+  height: 35px;
+  width: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    background-color: var(--gray0);
+  }
+
+  & * {
+    color: var(--gray1);
+  }
+}
+
+// modify tab
+
+.modify-tab-render-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

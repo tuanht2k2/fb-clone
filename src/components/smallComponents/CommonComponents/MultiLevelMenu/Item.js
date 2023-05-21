@@ -1,9 +1,13 @@
-import classNames from 'classnames/bind';
-import style from './MultiLevelMenu.module.scss';
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import { Link } from 'react-router-dom';
+
+import classNames from 'classnames/bind';
+
 import { uploadImage } from '../../../../actions/uploadImage';
 import { showTippy } from '../../../../actions/tippyState';
-import { useState } from 'react';
+
+import style from './MultiLevelMenu.module.scss';
 
 const cx = classNames.bind(style);
 
@@ -21,7 +25,7 @@ const Item = (props) => {
     dispatch(showTippyAction);
   };
 
-  return (
+  return !props.item.to ? (
     <li
       itemRef={props.itemRef}
       className={cx('item-wrapper')}
@@ -58,6 +62,15 @@ const Item = (props) => {
         <span className={cx('item-title')}>{props.item.title}</span>
       )}
     </li>
+  ) : (
+    <Link to={props.item.to} itemRef={props.itemRef} className={cx('item-wrapper')}>
+      {props.item.icon ? (
+        <span className={cx('item-icon-wrapper')}>{props.item.icon}</span>
+      ) : (
+        <img className={cx('item-img')} src={props.item.imgURL} />
+      )}
+      <span className={cx('item-title')}>{props.item.title}</span>
+    </Link>
   );
 };
 
